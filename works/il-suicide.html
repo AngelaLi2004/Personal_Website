@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spatial Clustering of Suicide Mortality Among Older Adults in Illinois (2015–2023) - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 这一页由 files/WORKS 里的 .md 自动生成；改内容可以直接改这里 -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">Spatial Clustering of Suicide Mortality Among Older Adults in Illinois (2015–2023)</h1>
+<p><strong>Course</strong>: GGIS 560 – Spatial Epidemiology<br>
+<strong>Institution</strong>: University of Illinois Urbana–Champaign<br>
+<strong>Instructor</strong>: Dr. Csaba Varga<br>
+<strong>Project Type</strong>: Final Project</p>
+<hr>
+<h3>Project Overview</h3>
+<p>Suicide among adults aged <strong>65 years and older</strong> is an increasing public health concern in the United States, yet its <strong>sub-state spatial patterns</strong> remain underexplored.<br>
+This project investigates whether older adult suicide mortality in <strong>Illinois</strong> exhibits spatial clustering and examines how <strong>county-level socioeconomic factors</strong> are associated with the observed patterns.</p>
+<p>Using <strong>county-level suicide mortality data</strong> and <strong>spatial statistical methods</strong>, this study integrates exploratory spatial analysis and regression modeling to identify geographic disparities and spatial heterogeneity in risk factors.</p>
+<hr>
+<h3>Data Sources</h3>
+<ul><li>
+<strong>Illinois Violent Death Reporting System (IVDRS)</strong>
+ County-level suicide deaths among adults aged 65+, aggregated for <strong>2020–2023</strong> to mitigate data suppression and small cell counts.
+</li><li>
+<strong>American Community Survey (ACS) 5-year estimates</strong>
+ Socioeconomic and demographic indicators, including:
+<ul><li>
+Population density
+</li><li>
+Older adults living alone
+</li><li>
+Poverty among adults aged 65+
+</li><li>
+Work intensity (≥35 hours/week)
+</li><li>
+Educational attainment
+</li><li>
+Veteran status
+</li></ul>
+</li></ul>
+<figure class="work-fig"><img src="files/WORKS/project/il-suicide/1.png" alt="IDPH online dashboard used for mortality data" loading="lazy"><figcaption>IDPH online dashboard used for mortality data</figcaption></figure>
+<hr>
+<h3>Methods</h3>
+<h4>Exploratory Spatial Analysis</h4>
+<ul><li>
+Choropleth mapping of <strong>suicide counts and rates</strong>
+</li><li>
+<strong>Global Moran’s I</strong> to assess overall spatial autocorrelation
+</li><li>
+<strong>Incremental spatial autocorrelation</strong> to identify optimal spatial distance
+</li><li>
+<strong>Getis–Ord Gi</strong>* hotspot analysis
+</li><li>
+<strong>Anselin Local Moran’s I</strong> for cluster and outlier detection
+</li></ul>
+<h4>Regression Analysis</h4>
+<ul><li>
+Exploratory regression and <strong>Ordinary Least Squares (OLS)</strong>
+</li><li>
+<strong>Geographically Weighted Regression (GWR)</strong> to assess spatially varying relationships
+</li></ul>
+<p>All spatial analyses were conducted at the <strong>county level</strong>, with data projected to <strong>UTM Zone 16N</strong>.</p>
+<hr>
+<h3>Spatial Distribution of Suicide Mortality</h3>
+<p>Choropleth mapping reveals substantial geographic variation in suicide mortality among older adults across Illinois.<br>
+While higher counts are concentrated in more populous counties, <strong>population-adjusted rates</strong> highlight elevated risk in several northern and central counties.</p>
+<figure class="work-fig"><img src="files/WORKS/project/il-suicide/3.png" alt="Choropleth maps of 2020–2023 suicide counts and rates" loading="lazy"><figcaption>Choropleth maps of 2020–2023 suicide counts and rates</figcaption></figure>
+<hr>
+<h3>Spatial Autocorrelation</h3>
+<p>Incremental spatial autocorrelation identified a peak clustering distance of approximately <strong>56.8 km</strong>, corresponding to the highest z-score.<br>
+Global Moran’s I confirmed <strong>significant positive spatial autocorrelation</strong> (I = 0.2895, p &lt; 0.001), indicating that suicide mortality among older adults is <strong>not randomly distributed</strong> in space.</p>
+<figure class="work-fig"><img src="files/WORKS/project/il-suicide/4.png" alt="Spatial autocorrelation by distance and Global Moran’s I" loading="lazy"><figcaption>Spatial autocorrelation by distance and Global Moran’s I</figcaption></figure>
+<hr>
+<h3>Hotspot and Local Cluster Analysis</h3>
+<p>Hotspot analysis identified statistically significant <strong>high-risk clusters</strong> in counties adjacent to the <strong>Chicago metropolitan area</strong>, while cold spots were concentrated in southern and western Illinois.<br>
+Local Moran’s I further revealed <strong>high–high and low–low clusters</strong>, as well as spatial outliers, highlighting localized geographic disparities.</p>
+<figure class="work-fig"><img src="files/WORKS/project/il-suicide/2.png" alt="Hot spot and cluster &amp; outlier analysis" loading="lazy"><figcaption>Hot spot and cluster &amp; outlier analysis</figcaption></figure>
+<hr>
+<h3>Geographically Weighted Regression Results</h3>
+<p>A GWR model including <strong>population density</strong>, <strong>living alone</strong>, and <strong>work intensity</strong> was selected based on theoretical relevance and model performance.<br>
+Results indicate strong <strong>spatial heterogeneity</strong> in the relationships between socioeconomic factors and older adult suicide mortality.</p>
+<p>Key findings include:</p>
+<ul><li>
+Population density is generally <strong>negatively associated</strong> with suicide mortality
+</li><li>
+Living alone shows a consistently <strong>positive association</strong>, with stronger effects in southern Illinois
+</li><li>
+Work intensity exhibits substantial regional variation
+</li></ul>
+<figure class="work-fig"><img src="files/WORKS/project/il-suicide/5.png" alt="GWR residuals and spatially varying coefficients" loading="lazy"><figcaption>GWR residuals and spatially varying coefficients</figcaption></figure>
+<hr>
+<h3>Key Findings</h3>
+<ul><li>
+Suicide mortality among older adults in Illinois exhibits <strong>significant spatial clustering</strong>
+</li><li>
+High-risk clusters are concentrated in <strong>northeastern Illinois</strong>
+</li><li>
+Socioeconomic determinants show <strong>non-stationary spatial relationships</strong>
+</li><li>
+Place-based approaches are critical for understanding and addressing late-life suicide risk
+</li></ul>
+<hr>
+<h3>Skills Demonstrated</h3>
+<ul><li>
+Spatial autocorrelation and hotspot analysis
+</li><li>
+GIS-based choropleth mapping
+</li><li>
+Regression modeling (OLS &amp; GWR)
+</li><li>
+Public health and spatial epidemiology analysis
+</li><li>
+Interpretation of spatial heterogeneity in socioeconomic effects
+</li></ul>
+<hr>
+<h3>Notes</h3>
+<p>This project was completed as part of <strong>GGIS 560 (Spatial Epidemiology)</strong> and emphasizes the use of spatial statistical methods to inform <strong>place-based public health interventions</strong>.</p>
+<hr>
+<h3>Resources</h3>
+<p><i class="fa-solid fa-file-pdf"></i> <strong><a href="files/WORKS/project/il-suicide/Final%20Project.pdf" target="_blank" rel="noopener">Download Final Project PDF</a></strong></p>
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

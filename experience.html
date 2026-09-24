@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <main class="page-content">
+      <section>
+        <h2>💼 Experience</h2>
+
+        <div class="exp-tabs" role="tablist" aria-label="Experience type">
+          <button class="exp-tab" role="tab" id="tab-research" aria-controls="research" aria-selected="true">🔬 Research<span class="count">(3)</span></button>
+          <button class="exp-tab" role="tab" id="tab-work" aria-controls="work" aria-selected="false">🏢 Work<span class="count">(5)</span></button>
+        </div>
+
+        <!-- 复制一个 .edu-entry 块就能加一条；记得改上面 tab 里的数量 -->
+        <div class="exp-panel edu-timeline" id="research" role="tabpanel" aria-labelledby="tab-research">
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/research/stats.png" alt="UIUC Statistics logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">Aug. 2026 – Present</p>
+              <p class="edu-role">Undergraduate Researcher</p>
+              <p class="edu-org">Masters &amp; Undergraduate Research Experience in Statistics (MURES), UIUC</p>
+              <p class="edu-meta"><strong>Advised by:</strong> Dr. Lelys Bravo De Guenni</p>              
+              <p class="edu-meta"><strong>Topic:</strong> Spatial Classification of the Brazilian–Colombian Amazon: Land Systems and Non-State Armed Actors</p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Developing a pixel-level spatial classification of the Brazilian–Colombian Amazon that jointly captures natural-resource land systems and the presence of non-state armed actors, using raster and municipal-level data harmonized onto a uniform grid.</li>
+                  <li>Applying an archetype-analysis framework (data harmonization, pre-treatment, and clustering) to indicators on illicit economies, land use, accessibility, and organized violence, and testing how sensitive the results are to grid scale.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/research/vt.jpeg" alt="Virginia Tech Carilion School of Medicine logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">Jun. 2024 – Present</p>
+              <p class="edu-role">Research Assistant</p>
+              <p class="edu-org">Virginia Tech Carilion School of Medicine</p>
+              <p class="edu-meta"><strong>Advised by:</strong> Dr. Mengxi Zhang, Dr. Junghwan Kim </p>
+              <p class="edu-meta"><strong>Topics:</strong> Spatial Accessibility to Diabetes Care in Virginia; Spatial Accessibility to Mental Health Services in the United States</p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <p><strong>Spatial Accessibility to Diabetes Care in Virginia</strong></p>
+                <ul>
+                  <li>Developed a spatial accessibility framework for diabetes care in Virginia using census-tract demand, clinic supply, provider FTEs, and OSRM-based driving times.</li>
+                  <li>Implemented a refined two-step floating catchment area (2SFCA) model with distance-decay functions to measure geographic disparities in access to diabetes care.</li>
+                </ul>
+                <p><strong>Spatial Accessibility to Mental Health Services in the United States</strong></p>
+                <ul>
+                  <li>Analyzed geographic accessibility to mental health services across the United States using multi-scale travel-time catchments, Census demographics, and facility data.</li>
+                  <li>Applied OLS, spatial autocorrelation diagnostics, and MGWR to examine geographic disparities and the socioeconomic factors associated with access to care.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/research/ESDL.jpeg" alt="UC Berkeley ESDL Lab logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">Sep. 2024 – May 2025</p>
+              <p class="edu-role">Undergraduate Research Apprentice (URAP)</p>
+              <p class="edu-org">ESDL Lab, UC Berkeley</p>
+              <p class="edu-meta"><strong>Advised by:</strong> Dr. Laurel Larsen, Dr. Lukas Winkerprins</p>
+              <p class="edu-meta"><strong>Topic:</strong> Vegetation and Land-Cover Mapping in the Okavango Delta</p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Mapped vegetation and land-cover patterns in Botswana's Okavango Delta using satellite imagery, expert interpretation, and geospatial analysis in QGIS and Google Earth Engine.</li>
+                  <li>Supported land-cover classification and ecosystem analysis using Random Forest, DSWE, NDVI, canopy, entropy, and multi-temporal remote-sensing datasets.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+        </div>
+
+        <div class="exp-panel edu-timeline" id="work" role="tabpanel" aria-labelledby="tab-work" hidden>
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/work/Fedex.jpeg" alt="FedEx logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">May 2026 – Present</p>
+              <p class="edu-role">GIS and CS Engineer Co-op</p>
+              <p class="edu-org">FedEx Corp.</p>
+              <p class="edu-meta"><strong>Techniques:</strong></p>
+              <p class="edu-tags"><span class="tag">Python</span><span class="tag">GCP</span><span class="tag">BigQuery</span><span class="tag">pandas</span><span class="tag">SQL</span><span class="tag">ArcGIS Pro</span><span class="tag">LLM</span></p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Developed Python-based geospatial workflows for GPS trajectory analysis, geofence validation, and route comparison using pandas, ArcPy, and enterprise spatial datasets.</li>
+                  <li>Built an exploratory data analysis (EDA) package on GCP and BigQuery, and applied LLM-assisted analysis and visualization workflows to support transportation, location intelligence, and operational decision-making.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/work/wri.png" alt="World Resources Institute logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">Apr. 2026 – present</p>
+              <p class="edu-role">Database Intern (Remote)</p>
+              <p class="edu-org">World Resources Institute (WRI)</p>
+              <p class="edu-meta"><strong>Techniques:</strong></p>
+              <p class="edu-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">ETL</span><span class="tag">LLM</span><span class="tag">Geospatial Data</span></p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Built Python-based ETL workflows to collect, clean, standardize, and maintain multi-source urban, energy, and policy datasets.</li>
+                  <li>Used SQL, geospatial databases, and LLM-assisted workflows to support reproducible data pipelines and frontend data services for urban research applications.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/work/library.png" alt="UIUC Map Library logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">Sep. 2025 – May. 2026</p>
+              <p class="edu-role">Student Hourly Worker</p>
+              <p class="edu-org">Map Library, University of Illinois Urbana-Champaign</p>
+              <p class="edu-meta"><strong>Techniques:</strong></p>
+              <p class="edu-tags"><span class="tag">Cartography</span><span class="tag">Map Collections</span><span class="tag">Library Congress</span></p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Supported map, atlas, and geospatial resource collections through circulation, catalog searching, shelving, labeling, and collection organization.</li>
+                  <li>Assisted students and researchers in locating cartographic and geographic materials while maintaining specialized map-library collections.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/work/city_dna.jpeg" alt="CityDNA logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">May. 2025 – Aug. 2025</p>
+              <p class="edu-role">GIS Summer Intern</p>
+              <p class="edu-org">CityDNA</p>
+              <p class="edu-meta"><strong>Techniques:</strong></p>
+              <p class="edu-tags"><span class="tag">Python</span><span class="tag">Vue.js</span><span class="tag">Mapbox GL</span><span class="tag">Cesium</span><span class="tag">Turf.js</span><span class="tag">GeoPandas</span></p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Developed interactive 2D and 3D geospatial visualization tools for low-altitude airspace using Vue, Mapbox GL, Cesium, Turf.js, and ECharts.</li>
+                  <li>Built Python geoprocessing workflows for airspace boundaries, flight routes, terrain analysis, wind fields, visibility analysis, and UAV spatial applications.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="edu-entry">
+            <div class="edu-logo-card">
+              <img src="images/experience/work/agri.jpeg" alt="Shanghai Agricultural Academy logo">
+            </div>
+            <div class="edu-content">
+              <p class="edu-date">May. 2024 – Aug. 2024</p>
+              <p class="edu-role">Remote Sensing Intern</p>
+              <p class="edu-org">Shanghai Agricultural Academy</p>
+              <p class="edu-meta"><strong>Techniques:</strong></p>
+              <p class="edu-tags"><span class="tag">Remote Sensing</span><span class="tag">GIS</span><span class="tag">ArcGIS</span><span class="tag">Python</span></p>
+              <details class="exp-details">
+                <summary>Details</summary>
+                <ul>
+                  <li>Processed and analyzed satellite imagery and geospatial datasets to support agricultural remote-sensing and land-monitoring applications.</li>
+                  <li>Applied GIS and remote-sensing workflows to extract, visualize, and interpret spatial patterns in agricultural landscapes.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+  <script>
+    // Research / Work 切换；网址加 #work 可直接打开第二个 tab
+    (function () {
+      const tabs = document.querySelectorAll(".exp-tab");
+      function show(id) {
+        tabs.forEach(function (t) {
+          const on = t.getAttribute("aria-controls") === id;
+          t.setAttribute("aria-selected", on);
+          document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+        });
+      }
+      tabs.forEach(function (t) {
+        t.addEventListener("click", function () {
+          const id = t.getAttribute("aria-controls");
+          show(id);
+          history.replaceState(null, "", "#" + id);
+        });
+      });
+      if (location.hash === "#work") show("work");
+    })();
+  </script>
+</body>
+</html>

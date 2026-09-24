@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diabetes Care Accessibility in Virginia - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 图片在 files/WORKS/research/diabetes-access/ -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#research"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">Diabetes Care Accessibility in Virginia</h1>
+<p>Where can adults with diabetes in Virginia reach diabetes care providers, and how does the picture change between two accessibility models?</p>
+<p><a class="tag" href="presentation.html">Oral presentation, Symposium on Spatiotemporal Data Science 2026</a></p>
+
+<h3>Background</h3>
+<p>Diabetes needs regular, ongoing care, so how close people live to providers matters. Access in Virginia is uneven: providers cluster in metro areas like Northern Virginia, Richmond, and Hampton Roads, while much of the rural west and southside is far from care. This project measures access for every census tract in the state, weighing where diabetes patients live against how many providers can serve them.</p>
+
+<h3>Accessibility: 2SFCA vs. 2SVCA</h3>
+<div class="work-pair">
+  <figure class="work-fig"><a href="files/WORKS/research/diabetes-access/2sfca-map.png" target="_blank" rel="noopener"><img src="files/WORKS/research/diabetes-access/2sfca-map.png" alt="2SFCA accessibility score for diabetes care by census tract in Virginia" loading="lazy"></a><figcaption>2SFCA accessibility score</figcaption></figure>
+  <figure class="work-fig"><a href="files/WORKS/research/diabetes-access/2svca-map.png" target="_blank" rel="noopener"><img src="files/WORKS/research/diabetes-access/2svca-map.png" alt="2SVCA accessibility score for diabetes care by census tract in Virginia" loading="lazy"></a><figcaption>2SVCA accessibility score</figcaption></figure>
+</div>
+
+<h3>Where the two models disagree</h3>
+<div class="work-pair">
+  <figure class="work-fig"><a href="files/WORKS/research/diabetes-access/difference-map.png" target="_blank" rel="noopener"><img src="files/WORKS/research/diabetes-access/difference-map.png" alt="Difference between 2SFCA and 2SVCA scores by census tract" loading="lazy"></a><figcaption>2SFCA − 2SVCA: red = higher under 2SFCA, blue = higher under 2SVCA</figcaption></figure>
+  <figure class="work-fig"><a href="files/WORKS/research/diabetes-access/bivariate-map.png" target="_blank" rel="noopener"><img src="files/WORKS/research/diabetes-access/bivariate-map.png" alt="Bivariate map comparing 2SFCA and 2SVCA accessibility" loading="lazy"></a><figcaption>Bivariate map: dark purple = high under both models</figcaption></figure>
+</div>
+
+<h3>Results</h3>
+<ul>
+  <li>Both models agree on the overall pattern: access is highest in Northern Virginia, Richmond, and Hampton Roads, and lowest across rural tracts.</li>
+  <li>The difference map shows where the choice of model changes a tract's score, mostly in and around metro areas.</li>
+  <li>A small number of tracts had no clinic within the travel-time threshold at all.</li>
+</ul>
+
+<h3>Methods</h3>
+<ul>
+  <li><strong>2SFCA</strong>: provider supply divided by nearby diabetes demand, then summed for each tract, with a Gaussian distance decay. The decay parameter is calibrated with the reconciled 2SFCA (r2SFCA) cross-entropy method.</li>
+  <li><strong>2SVCA</strong>: two-step virtual catchment area, compared against 2SFCA.</li>
+  <li><strong>Travel time</strong>: road-network driving times from a local OSRM server, tested with 30- and 60-minute catchments.</li>
+  <li><strong>Tools</strong>: Python (pandas, GeoPandas), OSRM</li>
+</ul>
+
+<h3>Data</h3>
+<ul>
+  <li><strong>Demand</strong>: adults with diabetes per census tract, from CDC PLACES 2023 prevalence × ACS 2023 adult population</li>
+  <li><strong>Supply</strong>: diabetes-care providers from NPPES 2026, geocoded and summed as full-time equivalents per practice location</li>
+  <li><strong>Boundaries</strong>: Census TIGER/Line census tracts</li>
+</ul>
+
+      <a class="back-link" href="portfolio.html#research"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

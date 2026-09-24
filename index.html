@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <main class="page-content">
+      <section>
+        <p class="hero-kicker">Geography &amp; GIS · Statistics · UIUC</p>
+        <h1 class="hero-title">Hi, I'm <span class="hand">Angela</span> —<br>I <mark>map how place shapes the environment.</mark></h1>
+
+        <p>
+          I am <strong>Angela (Meixian) Li</strong>, an undergraduate student in Geography &amp; GIS and Statistics at the
+          <strong>University of Illinois Urbana-Champaign</strong>, advised by <strong>Dr. Yue Lin</strong> in the
+          <a href="https://geocompsoc.web.illinois.edu/" target="_blank" rel="noopener">Geospatial Computational Social Science Lab</a>.
+        </p>
+
+        <p>
+          My research focuses on applying <strong>spatial, statistical, and computational methods</strong> to study
+          geographic disparities in <strong>healthcare access and social justice</strong>. I'm especially
+          curious about how the places people live shape their health. To study this, I use GIS, spatial
+          statistics, and large-scale geospatial data to find where inequalities show up and why.
+        </p>
+
+        <p>
+          Outside of research, I enjoy <strong>🎾 tennis, 📷 photography, 🍂 plants, and 📖 reading</strong>.
+        </p>
+
+        <div class="sticky-note">
+          <small>🔭 Vision</small>
+          Using spatial data and computational methods to better understand how place shapes health and society.
+        </div>
+
+        <!-- CV：放好 files/CV.pdf 后取消注释
+        <p class="cv-line">
+          📄 <strong>Curriculum Vitae:</strong>
+          <a href="files/CV.pdf" target="_blank">View CV</a>
+          <span class="muted">(last updated: September 23, 2026)</span>
+        </p>
+        -->
+
+        <!-- 研究总览图：把图片放进 images/ 后取消注释
+        <div class="figure">
+          <img src="images/overview.jpeg" alt="Research overview">
+        </div>
+        -->
+      </section>
+
+      <section>
+        <h2>Research interests</h2>
+        <ul class="interest-chips">
+          <li>Health Geography</li>
+          <li>Computational Social Science</li>
+          <li>Spatial Statistics</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="zine-head">
+          <h2>📎 Bits of me</h2>
+          <span class="hand">tennis, maps, sunsets &amp; one very sleepy cat</span>
+        </div>
+
+        <!--
+          拼贴墙：把图片放进 images/about/，文件名和下面 src 一样就会自动显示；没放图就显示“+ photo”占位。
+          换图：改 src；换说明：改 figcaption；换框的样式：zine-polaroid（拍立得）/ zine-stamp（邮票）/ zine-plain（贴标签）。
+          tape = 顶部胶带，tape-corner = 角上胶带。z-a ~ z-g 控制宽度、形状和倾斜角度（在 style.css 里改）。
+        -->
+        <div class="zine-board">
+          <figure class="zine-item zine-polaroid tape z-a">
+            <div class="zine-photo"><img src="images/about/court.jpeg" alt="Me at a tennis stadium" onerror="this.remove()"></div>
+            <figcaption>🎾 Game </figcaption>
+          </figure>
+
+          <figure class="zine-item zine-stamp z-b">
+            <div class="zine-photo"><img src="images/about/map.png" alt="A map I made" onerror="this.remove()"></div>
+            <figcaption>maps I make</figcaption>
+          </figure>
+
+          <figure class="zine-item zine-plain tape tape-corner z-c">
+            <div class="zine-photo"><img src="images/about/botany.jpeg" alt="A flower shop by a city window" onerror="this.remove()"></div>
+            <figcaption>flowers &amp; city light 🌷</figcaption>
+          </figure>
+
+          <figure class="zine-item zine-polaroid tape z-d" style="--tape-tilt: 3deg">
+            <div class="zine-photo"><img src="images/about/sunset.jpeg" alt="Sunset over the ocean" onerror="this.remove()"></div>
+            <figcaption>chasing sunsets</figcaption>
+          </figure>
+
+          <figure class="zine-item zine-stamp z-e">
+            <div class="zine-photo"><img src="images/about/imagine.jpeg" alt="A colored-pencil doodle of clouds, stars and a moon" onerror="this.remove()"></div>
+            <figcaption>doodles &amp; daydreams ☁️</figcaption>
+          </figure>
+
+          <figure class="zine-item zine-polaroid tape z-g" style="--tape-tilt: -6deg">
+            <div class="zine-photo"><img src="images/about/meow.jpeg" alt="A grey cat lounging in the sun" onerror="this.remove()"></div>
+            <figcaption>meow 🐾</figcaption>
+          </figure>
+
+          <p class="zine-note z-f">place shapes everything ✶</p>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

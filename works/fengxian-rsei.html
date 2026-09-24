@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecological Monitoring of Fengxian District with Remote Sensing - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 文件在 files/WORKS/project/fengxian-rsei/ -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#maps"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">Ecological Monitoring of Fengxian District with Remote Sensing</h1>
+<p>How healthy is the ecological environment of Fengxian District, one of Shanghai's five new towns? A remote sensing assessment using Sentinel-2 and Landsat 8 imagery, image classification, and the Remote Sensing Ecological Index (RSEI).</p>
+
+<figure class="work-fig"><a href="files/WORKS/project/fengxian-rsei/figures/rsei.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/fengxian-rsei/figures/rsei.jpg" alt="Remote Sensing Ecological Index map of Fengxian District" loading="lazy"></a><figcaption>Remote Sensing Ecological Index (RSEI) for Fengxian District</figcaption></figure>
+
+<div class="work-pair">
+  <figure class="work-fig"><a href="files/WORKS/project/fengxian-rsei/figures/supervised-classification.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/fengxian-rsei/figures/supervised-classification.jpg" alt="Supervised land-cover classification of Fengxian District" loading="lazy"></a><figcaption>Supervised classification</figcaption></figure>
+  <figure class="work-fig"><a href="files/WORKS/project/fengxian-rsei/figures/unsupervised-classification.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/fengxian-rsei/figures/unsupervised-classification.jpg" alt="Unsupervised land-cover classification of Fengxian District" loading="lazy"></a><figcaption>Unsupervised classification</figcaption></figure>
+</div>
+
+<h3>Workflow</h3>
+<ul>
+  <li><strong>Preprocessing</strong>: Sentinel-2 10 m multiband compositing, mosaicking, calibration, and clipping; Landsat 8 thermal bands</li>
+  <li><strong>Classification</strong>: compared supervised and unsupervised classification of land cover</li>
+  <li><strong>Ecological indicators</strong>: greenness (NDVI), wetness, dryness (NDBSI), and heat (land surface temperature from Landsat 8)</li>
+  <li><strong>RSEI</strong>: normalized the four indicators, combined them with principal component analysis, and mapped the final index</li>
+</ul>
+
+<h3>Data &amp; Tools</h3>
+<ul>
+  <li><strong>Imagery</strong>: Sentinel-2A (June 2022), Landsat 8 OLI/TIRS</li>
+  <li><strong>Tools</strong>: ENVI</li>
+</ul>
+
+      <a class="back-link" href="portfolio.html#maps"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

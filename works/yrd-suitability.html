@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Residential Suitability in the Yangtze River Delta - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 文件在 files/WORKS/project/yrd-suitability/ -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#maps"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">Residential Suitability in the Yangtze River Delta</h1>
+<p>Which parts of the Yangtze River Delta are best suited for living? A county-level suitability evaluation combining water, roads, and vegetation with the Analytic Hierarchy Process (AHP) and ArcGIS weighted overlay. Team project with Yue Chen.</p>
+
+<figure class="work-fig"><a href="files/WORKS/project/yrd-suitability/figures/suitability-map.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/yrd-suitability/figures/suitability-map.jpg" alt="Residential suitability map of the Yangtze River Delta" loading="lazy"></a><figcaption>Residential suitability across the Yangtze River Delta</figcaption></figure>
+
+<div class="work-pair">
+  <figure class="work-fig"><a href="files/WORKS/project/yrd-suitability/figures/roads-rivers.png" target="_blank" rel="noopener"><img src="files/WORKS/project/yrd-suitability/figures/roads-rivers.png" alt="Roads and rivers overlaid on vegetation in the Yangtze River Delta" loading="lazy"></a><figcaption>Input layers: major roads, rivers, and vegetation</figcaption></figure>
+  <figure class="work-fig"><a href="files/WORKS/project/yrd-suitability/figures/ahp-hierarchy.png" target="_blank" rel="noopener"><img src="files/WORKS/project/yrd-suitability/figures/ahp-hierarchy.png" alt="AHP hierarchy built in YAAHP" loading="lazy"></a><figcaption>AHP hierarchy built in YAAHP</figcaption></figure>
+</div>
+
+<h3>Results</h3>
+<ul>
+  <li>The region is broadly livable: <strong>medium and high suitability cover about 90%</strong> of the area.</li>
+  <li><strong>Highest suitability</strong> is in the center (e.g., Wuzhong District, Cixi), with dense transport and water networks and good vegetation.</li>
+  <li><strong>Lowest suitability</strong> is along the coast and borders (e.g., Chongming, Dingyuan), limited by poor transport access or rugged terrain.</li>
+</ul>
+
+<h3>Data &amp; Methods</h3>
+<ul>
+  <li><strong>Data</strong>: county boundaries, major rivers, major roads, and vegetation type (Resource and Environment Science Data Center, CAS)</li>
+  <li><strong>Methods</strong>: AHP weights (YAAHP), then clip, reclassify, and weighted sum in ArcGIS</li>
+</ul>
+
+      <a class="back-link" href="portfolio.html#maps"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

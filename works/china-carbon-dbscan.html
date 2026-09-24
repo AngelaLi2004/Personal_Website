@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>China's Per-Capita Carbon Emissions: Spatial Clustering - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 文件在 files/WORKS/project/china-carbon-dbscan/ -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#maps"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">China's Per-Capita Carbon Emissions: Spatial Clustering</h1>
+<p>Where are China's per-capita carbon emissions concentrated, and which regions share similar emission profiles? A spatial analysis of 2020 emissions data, from global and local spatial autocorrelation to DBSCAN clustering.</p>
+
+<div class="work-pair">
+  <figure class="work-fig"><a href="files/WORKS/project/china-carbon-dbscan/figures/per-capita-emissions.png" target="_blank" rel="noopener"><img src="files/WORKS/project/china-carbon-dbscan/figures/per-capita-emissions.png" alt="Map of per-capita carbon emissions across China in 2020" loading="lazy"></a><figcaption>Per-capita carbon emissions, 2020</figcaption></figure>
+  <figure class="work-fig"><a href="files/WORKS/project/china-carbon-dbscan/figures/dbscan-clusters.png" target="_blank" rel="noopener"><img src="files/WORKS/project/china-carbon-dbscan/figures/dbscan-clusters.png" alt="DBSCAN cluster map of per-capita carbon emissions across China" loading="lazy"></a><figcaption>DBSCAN clusters (values below 0 are noise)</figcaption></figure>
+</div>
+<div class="work-pair">
+  <figure class="work-fig"><a href="files/WORKS/project/china-carbon-dbscan/figures/lisa-clusters.png" target="_blank" rel="noopener"><img src="files/WORKS/project/china-carbon-dbscan/figures/lisa-clusters.png" alt="Local Moran&#39;s I cluster map" loading="lazy"></a><figcaption>LISA clusters: high-high (red) and low-low (blue)</figcaption></figure>
+  <figure class="work-fig"><a href="files/WORKS/project/china-carbon-dbscan/figures/lisa-scatterplot.png" target="_blank" rel="noopener"><img src="files/WORKS/project/china-carbon-dbscan/figures/lisa-scatterplot.png" alt="Moran local scatterplot" loading="lazy"></a><figcaption>Moran local scatterplot</figcaption></figure>
+</div>
+
+<h3>Results</h3>
+<ul>
+  <li>Emissions are clearly clustered: global <strong>Moran's I = 0.36</strong> (p = 0.001).</li>
+  <li><strong>High–high clusters</strong> sit in the north and northwest, and <strong>low–low clusters</strong> in the southwest.</li>
+  <li>DBSCAN groups regions with similar emission profiles, which points toward region-specific reduction policies.</li>
+</ul>
+
+<h3>Data &amp; Tools</h3>
+<ul>
+  <li><strong>Data</strong>: 2020 carbon emissions by administrative unit (per-capita, agricultural, industrial, and service-sector)</li>
+  <li><strong>Methods</strong>: Queen contiguity weights, global Moran's I, LISA, DBSCAN</li>
+  <li><strong>Tools</strong>: Python (GeoPandas, PySAL/esda, scikit-learn)</li>
+</ul>
+
+      <a class="back-link" href="portfolio.html#maps"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

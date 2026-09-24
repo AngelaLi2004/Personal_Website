@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WildTrack: National Park Species Tracking - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 截图在 files/WORKS/project/wildtrack/；代码在 GitHub -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">WildTrack: National Park Species Tracking</h1>
+<p>A full-stack, database-centered web app for planning wildlife trips: search which U.S. national parks a species lives in, see where it was last spotted, and share your own sightings on a map. CS 411 (Database Systems) final project at UIUC, built by a team of four. I worked on the SQL database, Google Cloud (GCP) setup, and parts of the frontend and backend.</p>
+<p><a class="tag" href="https://github.com/AngelaLi2004/National-Park-Database-Project" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code on GitHub</a></p>
+
+<figure class="work-fig work-fig-wide"><a href="files/WORKS/project/wildtrack/species-search.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/wildtrack/species-search.jpg" alt="WildTrack species search results for Acadia National Park" loading="lazy"></a><figcaption>Species search, filtered by national park and category</figcaption></figure>
+
+<figure class="work-fig work-fig-wide"><a href="files/WORKS/project/wildtrack/species-detail.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/wildtrack/species-detail.jpg" alt="WildTrack species detail page for American Elk with a sighting map" loading="lazy"></a><figcaption>Species detail page with the most recent sighting and its location on a map</figcaption></figure>
+
+<h3>Features</h3>
+<ul>
+  <li><strong>Species search</strong>: by common or scientific name, filtered by category (mammals, birds, plants…) and national park.</li>
+  <li><strong>Sighting records</strong>: registered users upload a species, photo, description, and location.</li>
+  <li><strong>Interactive map</strong>: every sighting appears as a map marker (Leaflet + OpenStreetMap); click one for details.</li>
+</ul>
+
+<h3>Database &amp; Architecture</h3>
+<ul>
+  <li><strong>Database</strong>: MySQL on Google Cloud SQL, with tables for users, species, national parks, park–species links, sightings, and locations.</li>
+  <li><strong>Backend</strong>: Node.js + Express in TypeScript; passwords hashed with bcrypt.</li>
+  <li><strong>Frontend</strong>: React with React Router and axios.</li>
+  <li><strong>Images</strong>: uploads stored in Google Cloud Storage, with only the URL saved in the database.</li>
+</ul>
+
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

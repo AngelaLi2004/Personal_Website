@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <main class="page-content">
+      <section>
+        <h2>🗂️ Portfolio</h2>
+        <p>Selected research, industry work, course projects, and maps, mostly on health, accessibility, and land systems.</p>
+
+        <div class="exp-tabs" role="group" aria-label="Filter projects">
+          <button class="exp-tab" data-filter="all" aria-selected="true">All</button>
+          <button class="exp-tab" data-filter="research" aria-selected="false">Research</button>
+          <button class="exp-tab" data-filter="industry" aria-selected="false">Industry</button>
+          <button class="exp-tab" data-filter="course" aria-selected="false">Course Projects</button>
+          <button class="exp-tab" data-filter="maps" aria-selected="false">Maps &amp; More</button>
+        </div>
+
+        <!-- 每个 .pf-group 是一类；复制一个 <article class="pf-card"> 就能加一个项目（记得改标题旁边的数字）
+             封面图放在 images/portfolio/；详情页是 work-*.html -->
+        <div class="pf-group" data-cat="research">
+          <h3>Research <span class="pf-count">3</span></h3>
+          <div class="pf-grid">
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/research/mental-health-access/figure1-15min.jpg" data-caption="Emergency Mental Health Service Accessibility in the U.S." aria-label="Enlarge image: Emergency Mental Health Service Accessibility in the U.S."><img src="images/portfolio/mental-health.jpg" alt="Emergency Mental Health Service Accessibility in the U.S." loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">Virginia Tech Carilion School of Medicine</div>
+                <h4><a href="works/mental-health.html">Emergency Mental Health Service Accessibility in the U.S.</a></h4>
+                <p class="pf-desc">Nationwide 15- and 30-minute driving-time access to psychiatric walk-in services and crisis intervention teams, with MGWR. 1st Place, AAG Peter Gould Student Paper Competition.</p>
+                <div class="pf-tags"><span class="tag">Health Geography</span><span class="tag">MGWR</span><span class="tag">Mapbox API</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/mental-health.html">Read project →</a><a class="tag" href="files/WORKS/research/mental-health-access/poster.pdf" target="_blank" rel="noopener">Poster</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/research/diabetes-access/bivariate-map.png" data-caption="Diabetes Care Accessibility in Virginia" aria-label="Enlarge image: Diabetes Care Accessibility in Virginia"><img src="images/portfolio/diabetes-access.png" alt="Diabetes Care Accessibility in Virginia" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">Virginia Tech Carilion School of Medicine</div>
+                <h4><a href="works/diabetes-access.html">Diabetes Care Accessibility in Virginia</a></h4>
+                <p class="pf-desc">Tract-level access to diabetes care providers across Virginia, comparing 2SFCA and 2SVCA with OSRM driving times.</p>
+                <div class="pf-tags"><span class="tag">2SFCA</span><span class="tag">2SVCA</span><span class="tag">OSRM</span><span class="tag">Python</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/diabetes-access.html">Read project →</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/research/2.png" data-caption="Vegetation & Land-Cover Mapping, Okavango Delta" aria-label="Enlarge image: Vegetation & Land-Cover Mapping, Okavango Delta"><img src="images/portfolio/okavango.jpg" alt="Vegetation & Land-Cover Mapping, Okavango Delta" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">URAP, ESDL Lab, UC Berkeley</div>
+                <h4>Vegetation &amp; Land-Cover Mapping, Okavango Delta</h4>
+                <p class="pf-desc">Mapped vegetation and land cover in Botswana's Okavango Delta with Random Forest classification and multi-temporal imagery in Google Earth Engine.</p>
+                <div class="pf-tags"><span class="tag">Remote Sensing</span><span class="tag">Google Earth Engine</span><span class="tag">Random Forest</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="pf-group" data-cat="industry">
+          <h3>Industry <span class="pf-count">3</span></h3>
+          <div class="pf-grid">
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/intern/fedex-service-map/home-delivery-map-61820.png" data-caption="FedEx Ground & Home Delivery Service Maps" aria-label="Enlarge image: FedEx Ground & Home Delivery Service Maps"><img src="images/portfolio/fedex-service-map.jpg" alt="FedEx Ground & Home Delivery Service Maps" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">FedEx Co-op</div>
+                <h4><a href="https://www.fedex.com/grd/maps/ShowMapEntry.do" target="_blank" rel="noopener">FedEx Ground &amp; Home Delivery Service Maps</a></h4>
+                <p class="pf-desc">Prepared the data behind FedEx's public service maps by filtering shipping tables with rule-based logic, turning them into the transit days shown for every U.S. region from a chosen ZIP code.</p>
+                <div class="pf-tags"><span class="tag">Data Processing</span><span class="tag">Logistics</span><span class="tag">Service Maps</span></div>
+                <div class="pf-actions"><a class="pf-more" href="https://www.fedex.com/grd/maps/ShowMapEntry.do" target="_blank" rel="noopener">View live map ↗</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/intern/city-sphere/citysphere-platform.png" data-caption="CitySphere City Climate Platform" aria-label="Enlarge image: CitySphere City Climate Platform"><img src="images/portfolio/citysphere.jpg" alt="CitySphere City Climate Platform" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">World Resources Institute (WRI)</div>
+                <h4><a href="https://www.citysphere.net/en" target="_blank" rel="noopener">CitySphere City Climate Platform</a></h4>
+                <p class="pf-desc">A public platform comparing climate action across 370+ cities worldwide. Built Python ETL workflows to collect and standardize the urban, energy, and policy data behind its city database.</p>
+                <div class="pf-tags"><span class="tag">Python</span><span class="tag">ETL</span><span class="tag">SQL</span></div>
+                <div class="pf-actions"><a class="pf-more" href="https://www.citysphere.net/en" target="_blank" rel="noopener">Visit site ↗</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/intern/low-altitude-airspace/cover-web.jpg" data-caption="Low-Altitude Airspace Mapping" aria-label="Enlarge image: Low-Altitude Airspace Mapping"><img src="images/portfolio/low-altitude.jpg" alt="Low-Altitude Airspace Mapping" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">CityDNA</div>
+                <h4>Low-Altitude Airspace Mapping</h4>
+                <p class="pf-desc">Geoprocessing and visualization of low-altitude airspace zones, flight routes, and UAV spatial applications over satellite imagery.</p>
+                <div class="pf-tags"><span class="tag">Python</span><span class="tag">GeoPandas</span><span class="tag">Mapbox GL</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="pf-group" data-cat="course">
+          <h3>Course Projects <span class="pf-count">5</span></h3>
+          <div class="pf-grid">
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/wildtrack/species-search.jpg" data-caption="WildTrack: National Park Species Tracking" aria-label="Enlarge image: WildTrack: National Park Species Tracking"><img src="images/portfolio/wildtrack.jpg" alt="WildTrack: National Park Species Tracking" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">CS 411 Final Project, UIUC · Team of 4</div>
+                <h4><a href="works/wildtrack.html">WildTrack: National Park Species Tracking</a></h4>
+                <p class="pf-desc">A full-stack web app to search species across U.S. national parks and share wildlife sightings on an interactive map. I worked on the SQL database, GCP, and parts of the frontend and backend.</p>
+                <div class="pf-tags"><span class="tag">SQL</span><span class="tag">GCP</span><span class="tag">React</span><span class="tag">Node.js</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/wildtrack.html">Read project →</a><a class="tag" href="https://github.com/AngelaLi2004/National-Park-Database-Project" target="_blank" rel="noopener">GitHub</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/global-weather-shiny/visualization.jpg" data-caption="Global Weather Explorer (R Shiny)" aria-label="Enlarge image: Global Weather Explorer (R Shiny)"><img src="images/portfolio/global-weather.jpg" alt="Global Weather Explorer (R Shiny)" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">STAT 385, UIUC · Fall 2025</div>
+                <h4><a href="works/global-weather.html">Global Weather Explorer (R Shiny)</a></h4>
+                <p class="pf-desc">An interactive R Shiny app for exploring daily weather in capital cities worldwide, with custom plots, a searchable data table, and a 0–100 Weather Score built from seven weather and air-quality factors.</p>
+                <div class="pf-tags"><span class="tag">R</span><span class="tag">Shiny</span><span class="tag">dplyr</span><span class="tag">DT</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/global-weather.html">Read project →</a><a class="tag" href="https://github.com/AngelaLi2004/GlobalWeather_ShinyApp" target="_blank" rel="noopener">GitHub</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/il-suicide/5.png" data-caption="Suicide Mortality Among Older Adults in Illinois" aria-label="Enlarge image: Suicide Mortality Among Older Adults in Illinois"><img src="images/portfolio/il-suicide.jpg" alt="Suicide Mortality Among Older Adults in Illinois" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">GGIS 560 Spatial Epidemiology, UIUC</div>
+                <h4><a href="works/il-suicide.html">Suicide Mortality Among Older Adults in Illinois</a></h4>
+                <p class="pf-desc">Hot spot analysis, Local Moran's I, and GWR on county-level suicide mortality among adults 65+, showing clustering near Chicago and spatially varying risk factors.</p>
+                <div class="pf-tags"><span class="tag">Spatial Epidemiology</span><span class="tag">GWR</span><span class="tag">ArcGIS Pro</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/il-suicide.html">Read project →</a><a class="tag" href="files/WORKS/project/il-suicide/Final%20Project.pdf" target="_blank" rel="noopener">PDF</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/nyc-library/cover.jpeg" data-caption="Public Library Accessibility in New York City" aria-label="Enlarge image: Public Library Accessibility in New York City"><img src="images/portfolio/nyc-library.jpg" alt="Public Library Accessibility in New York City" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">GGIS 224, UIUC · May 2025</div>
+                <h4><a href="works/nyc-library.html">Public Library Accessibility in New York City</a></h4>
+                <p class="pf-desc">Walking-network accessibility (r5r), LISA, and OLS to test whether library access across NYC census tracts is equitable by race and income.</p>
+                <div class="pf-tags"><span class="tag">R</span><span class="tag">r5r</span><span class="tag">LISA</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/nyc-library.html">Read project →</a><a class="tag" href="files/WORKS/project/nyc-library/GGIS224%20FInal%20Project.pdf" target="_blank" rel="noopener">PDF</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/berkeley-geology/cover.png" data-caption="Geological Mapping of the Berkeley Hills" aria-label="Enlarge image: Geological Mapping of the Berkeley Hills"><img src="images/portfolio/berkeley-geology.jpg" alt="Geological Mapping of the Berkeley Hills" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">EPS 101 Field Geology, UC Berkeley</div>
+                <h4><a href="works/berkeley-geology.html">Geological Mapping of the Berkeley Hills</a></h4>
+                <p class="pf-desc">Field-based bedrock geology map and cross-sections of ~10 km² in the Berkeley Hills, from FieldMove data to QGIS and Illustrator.</p>
+                <div class="pf-tags"><span class="tag">Field Mapping</span><span class="tag">QGIS</span><span class="tag">Illustrator</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/berkeley-geology.html">Read project →</a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="pf-group" data-cat="maps">
+          <h3>Maps &amp; More <span class="pf-count">5</span></h3>
+          <div class="pf-grid">
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/yangpu-heritage/yangpu-heritage-map.png" data-caption="Yangpu Riverside Industrial Heritage Map" aria-label="Enlarge image: Yangpu Riverside Industrial Heritage Map"><img src="images/portfolio/yangpu-heritage.jpg" alt="Yangpu Riverside Industrial Heritage Map" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">Shanghai</div>
+                <h4><a href="works/yangpu-heritage.html">Yangpu Riverside Industrial Heritage Map</a></h4>
+                <p class="pf-desc">An illustrated map and timeline (1860–2007) of industrial heritage sites along the Yangpu riverfront in Shanghai.</p>
+                <div class="pf-tags"><span class="tag">Cartography</span><span class="tag">ArcGIS</span><span class="tag">Photoshop</span><span class="tag">Illustrator</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/yangpu-heritage.html">Read project →</a><a class="tag" href="files/WORKS/project/yangpu-heritage/yangpu-heritage-map.png" download>Download map</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/china-carbon-dbscan/figures/dbscan-clusters.png" data-caption="China's Per-Capita Carbon Emissions: Spatial Clustering" aria-label="Enlarge image: China's Per-Capita Carbon Emissions: Spatial Clustering"><img src="images/portfolio/china-dbscan.jpg" alt="China's Per-Capita Carbon Emissions: Spatial Clustering" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">China · 2020 data</div>
+                <h4><a href="works/china-carbon-dbscan.html">China's Per-Capita Carbon Emissions: Spatial Clustering</a></h4>
+                <p class="pf-desc">Global Moran's I, LISA, and DBSCAN clustering of 2020 per-capita carbon emissions to find where high- and low-emission regions concentrate.</p>
+                <div class="pf-tags"><span class="tag">Python</span><span class="tag">PySAL</span><span class="tag">DBSCAN</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/china-carbon-dbscan.html">Read project →</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/yrd-suitability/figures/suitability-map.jpg" data-caption="Residential Suitability in the Yangtze River Delta" aria-label="Enlarge image: Residential Suitability in the Yangtze River Delta"><img src="images/portfolio/yrd-suitability.jpg" alt="Residential Suitability in the Yangtze River Delta" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">Yangtze River Delta</div>
+                <h4><a href="works/yrd-suitability.html">Residential Suitability in the Yangtze River Delta</a></h4>
+                <p class="pf-desc">County-level residential suitability from water, roads, and vegetation, weighted with AHP and combined in ArcGIS. About 90% of the region is medium or high suitability.</p>
+                <div class="pf-tags"><span class="tag">AHP</span><span class="tag">ArcGIS</span><span class="tag">Suitability Analysis</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/yrd-suitability.html">Read project →</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/fengxian-rsei/figures/rsei.jpg" data-caption="Ecological Monitoring of Fengxian District" aria-label="Enlarge image: Ecological Monitoring of Fengxian District"><img src="images/portfolio/fengxian-rsei.jpg" alt="Ecological Monitoring of Fengxian District" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">Remote Sensing · Shanghai</div>
+                <h4><a href="works/fengxian-rsei.html">Ecological Monitoring of Fengxian District</a></h4>
+                <p class="pf-desc">Sentinel-2 and Landsat 8 imagery, land-cover classification, and the Remote Sensing Ecological Index (RSEI) for Fengxian District, Shanghai.</p>
+                <div class="pf-tags"><span class="tag">Remote Sensing</span><span class="tag">ENVI</span><span class="tag">RSEI</span></div>
+                <div class="pf-actions"><a class="pf-more" href="works/fengxian-rsei.html">Read project →</a></div>
+              </div>
+            </article>
+            <article class="pf-card">
+              <button type="button" class="pf-img" data-full="files/WORKS/project/nanhui-landuse/cover.png" data-caption="Production–Ecological–Living Land Use, Nanhui New City" aria-label="Enlarge image: Production–Ecological–Living Land Use, Nanhui New City"><img src="images/portfolio/nanhui-landuse.jpg" alt="Production–Ecological–Living Land Use, Nanhui New City" loading="lazy"><span class="pf-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span></button>
+              <div class="pf-body">
+                <div class="pf-meta">Pudong, Shanghai</div>
+                <h4>Production–Ecological–Living Land Use, Nanhui New City</h4>
+                <p class="pf-desc">Change in production, ecological, and living land use in Nanhui New City, Pudong, Shanghai, from 2000 to 2020.</p>
+                <div class="pf-tags"><span class="tag">Land Use Change</span><span class="tag">ArcGIS</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- 点封面放大 -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+  <script>
+    // 按类别筛选：All 显示全部分组，其他只显示对应分组。
+    // 选中的类别记在网址 #hash 里（如 portfolio.html#course），从项目页返回时会停在原来的类别。
+    (function () {
+      const buttons = document.querySelectorAll("[data-filter]");
+      const groups = document.querySelectorAll(".pf-group");
+      function show(f) {
+        if (!document.querySelector('[data-filter="' + f + '"]')) f = "all";
+        buttons.forEach(function (b) { b.setAttribute("aria-selected", b.dataset.filter === f); });
+        groups.forEach(function (g) { g.hidden = f !== "all" && g.dataset.cat !== f; });
+      }
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const f = btn.dataset.filter;
+          show(f);
+          history.replaceState(null, "", f === "all" ? location.pathname : "#" + f);
+        });
+      });
+      show(location.hash.slice(1) || "all");
+      window.addEventListener("hashchange", function () { show(location.hash.slice(1) || "all"); });
+    })();
+
+    // 简介被截断时显示 More / Less
+    document.querySelectorAll(".pf-desc").forEach(function (d) {
+      if (d.scrollHeight <= d.clientHeight + 1) return;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "pf-toggle";
+      btn.textContent = "More ▾";
+      btn.setAttribute("aria-expanded", "false");
+      btn.addEventListener("click", function () {
+        const open = d.classList.toggle("expanded");
+        btn.textContent = open ? "Less ▴" : "More ▾";
+        btn.setAttribute("aria-expanded", String(open));
+      });
+      d.after(btn);
+    });
+
+    // 点封面放大：Esc、点背景或 × 关闭
+    (function () {
+      const box = document.getElementById("lightbox");
+      const img = box.querySelector("img");
+      const cap = box.querySelector("figcaption");
+      function close() { box.hidden = true; img.src = ""; document.body.style.overflow = ""; }
+      document.querySelectorAll(".pf-img[data-full]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          img.src = btn.dataset.full;
+          img.alt = btn.dataset.caption;
+          cap.textContent = btn.dataset.caption;
+          box.hidden = false;
+          document.body.style.overflow = "hidden";
+          box.querySelector(".lightbox-close").focus();
+        });
+      });
+      box.addEventListener("click", function (e) { if (e.target !== img) close(); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !box.hidden) close(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spatial Inequality in Public Library Accessibility - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 这一页由 files/WORKS 里的 .md 自动生成；改内容可以直接改这里 -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">Spatial Inequality in Public Library Accessibility</h1>
+<p class="work-subtitle">New York City</p>
+<p><strong>Course</strong>: GGIS 224 – Geographic Information Science<br>
+<strong>Institution</strong>: University of Illinois Urbana-Champaign<br>
+<strong>Instructor</strong>: Dr. Wang<br>
+<strong>Author</strong>: Angela Li<br>
+<strong>Date</strong>: May 2025</p>
+<p><strong>Tools</strong>: R (sf, tidycensus, r5r, spdep, tmap), OpenStreetMap, ACS</p>
+<hr>
+<h3>Project Overview</h3>
+<p>Public libraries play a critical role in providing equitable access to information, digital resources, and community services.<br>
+This project examines whether <strong>public library accessibility in New York City is spatially equitable</strong>, and how accessibility patterns relate to <strong>race and income at the census tract level</strong>.</p>
+<p>Using <strong>walking-based network accessibility</strong>, spatial autocorrelation analysis (LISA), and regression modeling, this study evaluates whether neighborhoods with higher proportions of racial minorities or lower income experience systematically poorer access to public libraries.</p>
+<hr>
+<h3>Data Sources</h3>
+<ul><li>
+<strong>Public library locations</strong>: NYC Open Data (NYPL, BPL, QPL branches)
+</li><li>
+<strong>Census tracts &amp; demographics</strong>: ACS 5-year estimates (via <code>tidycensus</code>)
+</li><li>
+<strong>Road network</strong>: OpenStreetMap PBF (processed with <code>r5r</code>)
+</li></ul>
+<p>All datasets were projected to <strong>EPSG: 2263 (NAD83 / New York Long Island)</strong>.</p>
+<hr>
+<h3>Methodology</h3>
+<h4>Conceptual Workflow</h4>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/1.png" alt="" loading="lazy"></figure>
+<p>The workflow integrates demographic data, library locations, and walking networks to model accessibility and evaluate spatial inequality.</p>
+<h4>Accessibility Modeling</h4>
+<ul><li>
+Census tract centroids were generated using <code>st_centroid()</code>
+</li><li>
+Walking travel time to the nearest library was computed using
+ <code>r5r::travel_time_matrix()</code>
+</li><li>
+Median walking time (<code>travel_time_p50</code>) was used as the accessibility metric
+</li><li>
+Isochrone-based service areas were tested but excluded due to computational limits
+</li></ul>
+<hr>
+<h3>Results</h3>
+<h4>1. Spatial Distribution of Libraries</h4>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/2.png" alt="" loading="lazy"></figure>
+<p>Kernel Density Estimation (KDE) shows that public libraries are <strong>highly concentrated in Manhattan and central Brooklyn</strong>, while <strong>southern Staten Island and eastern Queens</strong> exhibit sparse coverage.</p>
+<hr>
+<h4>2. Tract-Level Accessibility Patterns</h4>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/3.png" alt="" loading="lazy"></figure>
+<p>Mapping median walking time reveals clear spatial disparities:</p>
+<ul><li>
+Most tracts fall within <strong>10–15 minutes</strong>
+</li><li>
+Longer travel times (20–30 minutes) are concentrated in
+ southern Staten Island, southeastern Queens, and parts of the Bronx
+</li></ul>
+<p>These patterns suggest uneven infrastructure and service distribution across the city.</p>
+<hr>
+<h4>3. Socioeconomic Context</h4>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/4.png" alt="" loading="lazy"></figure>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/5.png" alt="" loading="lazy"></figure>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/6.png" alt="" loading="lazy"></figure>
+<p>To contextualize accessibility, tract-level demographic variables were mapped:</p>
+<ul><li>
+<strong>% Black population</strong>: higher in central Brooklyn, SE Queens, Bronx
+</li><li>
+<strong>% Hispanic population</strong>: higher in northern Manhattan, South Bronx
+</li><li>
+<strong>Median household income</strong>: highest in Manhattan core and NW Brooklyn
+</li></ul>
+<p>These spatial patterns overlap with several underserved accessibility zones.</p>
+<hr>
+<h4>4. Spatial Autocorrelation (LISA)</h4>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/7.png" alt="" loading="lazy"></figure>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/8.png" alt="" loading="lazy"></figure>
+<p>Local Moran’s I analysis reveals statistically significant clustering:</p>
+<ul><li>
+<strong>High–High clusters (poor access)</strong> in southern Queens, eastern Brooklyn, Staten Island
+</li><li>
+<strong>Low–Low clusters (good access)</strong> in Manhattan and central Brooklyn
+</li></ul>
+<p>Global Moran’s I = <strong>0.3825</strong>, indicating moderate positive spatial autocorrelation.<br>
+This confirms that library access is <strong>not randomly distributed</strong> across NYC.</p>
+<hr>
+<h4>5. Regression Analysis</h4>
+<figure class="work-fig"><img src="files/WORKS/project/nyc-library/9.png" alt="" loading="lazy"></figure>
+<p>An Ordinary Least Squares (OLS) model was used: travel_time_p50 ~ %Black + %Hispanic + Median Income</p>
+<p>Key findings:</p>
+<ul><li>
+Only <strong>% Hispanic</strong> showed a statistically significant (p &lt; 0.05) <em>negative</em> association with travel time
+</li><li>
+% Black population and income were not significant
+</li><li>
+Model explanatory power was very low (R² = 0.0036)
+</li></ul>
+<p>Diagnostic plots indicate acceptable assumptions but high variability, suggesting that <strong>linear global models poorly capture accessibility inequality</strong>.</p>
+<hr>
+<h3>Discussion &amp; Limitations</h3>
+<ul><li>
+Spatial clustering (LISA) reveals inequities not captured by regression
+</li><li>
+Accessibility inequality likely operates <strong>locally and non-linearly</strong>
+</li><li>
+Key limitations:
+<ul><li>
+No population-demand or library capacity adjustment
+</li><li>
+Isochrone-based service counts excluded
+</li><li>
+Simplified linear modeling
+</li></ul>
+</li></ul>
+<hr>
+<h3>Conclusions</h3>
+<p>This project demonstrates that <strong>public library accessibility in NYC is spatially unequal</strong>, with underserved clusters concentrated in southern Queens, the Bronx, and Staten Island.</p>
+<p>While regression results show limited explanatory power, <strong>spatial autocorrelation analysis reveals clear place-based inequality</strong>, highlighting the importance of spatial methods for evaluating public infrastructure equity.</p>
+<p>Future work will incorporate:</p>
+<ul><li>
+Isochrone-based service areas
+</li><li>
+Spatial or non-linear regression models
+</li><li>
+Additional predictors such as transit access and population demand
+</li></ul>
+<hr>
+<h3>Skills Demonstrated</h3>
+<ul><li>
+Network-based accessibility modeling (r5r)
+</li><li>
+Spatial autocorrelation analysis (LISA, Moran’s I)
+</li><li>
+Census data integration (ACS, tidycensus)
+</li><li>
+GIS visualization and spatial reasoning
+</li></ul>
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# 私人文件：不上传（含学号、个人信息，或还没处理）
+files/WORKS/project/china-carbon-dbscan/report.pdf
+files/WORKS/project/china-carbon-dbscan/analysis.ipynb
+files/WORKS/project/yrd-suitability/slides.pptx
+files/WORKS/project/fengxian-rsei/report.docx
+files/WORKS/project/berkeley-geology/Geological Evolution of the East Bay Hills Region.pdf
+files/WORKS/project/il-suicide/Final Proposal.key
+files/WORKS/research/diabetes-access/methods-notes.docx
+
+# 原图 / 没用到的大文件（网页用的是压缩版）
+files/WORKS/research/mental-health-access/originals/
+files/WORKS/project/yangpu-heritage/riverfront-aerial.jpg
+files/WORKS/intern/low-altitude-airspace/cover.png
+
+# 旧的 markdown 模板和笔记（网站不用）
+files/WORKS/**/*.md

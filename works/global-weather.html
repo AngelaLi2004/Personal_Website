@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">  <!-- 本页在 works/ 子文件夹里，所有相对路径都按网站根目录算 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Weather Explorer (R Shiny) - Meixian Li</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead"></header>
+
+  <div class="page-wrap">
+    <aside id="sidebar"></aside>
+
+    <!-- 截图在 files/WORKS/project/global-weather-shiny/；代码在 GitHub -->
+    <main class="page-content work-page">
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+<h1 class="work-title">Global Weather Explorer (R Shiny)</h1>
+<p>An interactive R Shiny app for exploring daily weather in capital cities around the world. Pick a country, city, date range, and variable to plot the trend, browse the raw data, and get an overall Weather Score for the period. STAT 385 final project, UIUC, Fall 2025.</p>
+<p><a class="tag" href="https://github.com/AngelaLi2004/GlobalWeather_ShinyApp" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code on GitHub</a></p>
+
+<figure class="work-fig work-fig-wide"><a href="files/WORKS/project/global-weather-shiny/visualization.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/global-weather-shiny/visualization.jpg" alt="Global Weather Explorer showing daily temperature in Kabul with an average Weather Score" loading="lazy"></a><figcaption>Visualization tab: daily temperature in Kabul and the average Weather Score for the selected dates</figcaption></figure>
+
+<figure class="work-fig work-fig-wide"><a href="files/WORKS/project/global-weather-shiny/table.jpg" target="_blank" rel="noopener"><img src="files/WORKS/project/global-weather-shiny/table.jpg" alt="Global Weather Explorer data table" loading="lazy"></a><figcaption>Table tab: searchable, sortable raw data</figcaption></figure>
+
+<h3>Features</h3>
+<ul>
+  <li><strong>Custom plots</strong>: temperature, humidity, wind, precipitation, air quality, and more, over any date range.</li>
+  <li><strong>Data table</strong>: filter, sort, and search the underlying records.</li>
+  <li><strong>Weather Score (0–100)</strong>: a custom function scoring each day on temperature (25), PM2.5 (20), humidity (15), and cloud cover, wind, UV, and precipitation (10 each).</li>
+</ul>
+
+<h3>Data &amp; Tools</h3>
+<ul>
+  <li><strong>Data</strong>: World Weather Repository (Kaggle), daily observations for capital cities since August 2023, with 40+ weather and air-quality variables</li>
+  <li><strong>Tools</strong>: R, Shiny, dplyr, lubridate, DT</li>
+</ul>
+
+      <a class="back-link" href="portfolio.html#course"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="assets/js/layout.js"></script>
+</body>
+</html>
